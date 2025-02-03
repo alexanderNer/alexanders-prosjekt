@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     cells[i].style.backgroundColor = currentPlayer; // Bruker "rød" og "gul", men skulle vært "red" og "yellow"
 
                     // Bytter spiller: Hvis det var rød sin tur, blir det gul sin tur, og omvendt
-                    currentPlayer = (currentPlayer === "rød") ? "gul" : "rød"; // Bruker feil navn
+                    currentPlayer = (currentPlayer === "red") ? "yellow" : "red"; // Bruker feil navn
 
                     // Oppdaterer teksten som viser hvem sin tur det er
                     statusText.innerText = "Det er " + currentPlayer + " sin tur nå!"; // Bruker feil formatering
