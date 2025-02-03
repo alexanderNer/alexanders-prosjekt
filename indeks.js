@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     cells[i].style.backgroundColor = currentPlayer; // Setter fargen på cellen
 
                     // Bytter spiller: Hvis det var rød sin tur, blir det gul sin tur, og omvendt
-                    currentPlayer = (currentPlayer === "red") ? "yellow" : "red";
+                    currentPlayer = (currentPlayer === "rød") ? "gul" : "rød";
 
                     // Oppdaterer teksten som viser hvem sin tur det er
                     statusText.innerText = currentPlayer.charAt(0).toUpperCase() + currentPlayer.slice(1) + " sin tur";
