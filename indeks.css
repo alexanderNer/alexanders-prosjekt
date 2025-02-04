@@ -1,39 +1,79 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-    display: grid;
-    place-items: center;
+    font-family: ;
+    background: #F0FFF0;
 }
-h1 {
-    text-align: center;
-    margin: 20px 0 20px 0;
+
+.container {
+    height: 600px;
+    width: 350px;
+    background: url(bilder/Background.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 3px;
+
 }
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
+
+.container #ground {
+    position: absolute;
+    bottom: 0;
+    height: 630px;
+    width: 100%;
+    z-index: 1;
 }
-.brett {
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    border: 2px solid black;
-    width: 630px;
-    background-color: rgb(74, 74, 198);
+
+.container .bird {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    bottom: 300px;
+    left: 20px;
+    transition: all .1s;
 }
-ul {
-    display: grid;
-    place-items: center;
+
+.container .bird img {
+    height: 45px;
+    width: 45px;
 }
-ul p {
-    margin: 5px;
-    width: 75px;
-    height: 75px;
-    border: 2px solid black;
-    border-radius: 100px;
-    background-color: white;
+
+.container .game-logo {
+    height: 60px;
+    width: 200px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-ul:hover {
-cursor: pointer;
-background-color: rgb(98, 136, 238);
+.container .score{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 35px;
+    z-index: 1;
+    color: #FFF;
+text-shadow: 3px 2px #000;
+display: none;
+}
+
+.container .guide-txt{
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    font-family: ;
+    z-index: 1;
+    font-size: 7px;
+    text-transform: uppercase;
 }
