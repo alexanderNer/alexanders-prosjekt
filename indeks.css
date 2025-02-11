@@ -54,26 +54,28 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.container .score{
+
+.container .score {
     position: absolute;
     top: 100px;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 35px;
     z-index: 1;
     color: #FFF;
-text-shadow: 3px 2px #000;
-display: none;
+    text-shadow: 3px 2px #000;
+    display: none;
 }
 
-.container .guide-txt{
+.container .guide-txt {
     position: absolute;
     left: 50%;
     bottom: 70px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     white-space: nowrap;
     font-family: ;
     z-index: 1;
     font-size: 7px;
     text-transform: uppercase;
 }
+
