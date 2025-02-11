@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: ;
+   /*  font-family: ; */
     background: #F0FFF0;
 }
 
@@ -46,7 +46,7 @@ body {
     width: 45px;
 }
 
-.container .game-logo {
+.container .gameLogo {
     height: 60px;
     width: 200px;
     position: absolute;
@@ -73,7 +73,7 @@ body {
     bottom: 70px;
     transform: translate(-50%, -50%);
     white-space: nowrap;
-    font-family: ;
+   /*  font-family: ; */
     z-index: 1;
     font-size: 7px;
     text-transform: uppercase;

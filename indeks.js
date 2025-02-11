@@ -1,6 +1,6 @@
 let container = document.querySelector(".container");
 let bird = container.querySelector(".bird");
-let game-logo = container.querySelector("game-logo");
+let gameLogo = container.querySelector("game-logo");
 let scoreTxt = container.querySelector(".score");
 let guideTxt = container.querySelector(".guide-Txt");
 
