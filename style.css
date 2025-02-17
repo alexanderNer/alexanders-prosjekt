@@ -79,3 +79,25 @@ body {
     text-transform: uppercase;
 }
 
+.container .bottomPipe
+.container .topPipe{
+    height: 300px;
+    width: 50px;
+    position: absolute;
+}
+
+.container .bottomPipe img{
+    height: 320px;
+    width: 200px;
+    position: relative;
+    top: -10px;
+    left: -75px;
+}
+
+.container .topPipe img{
+    height: 310px;
+    width: 200px;
+    position: relative;
+    left: -75px;
+    transform: rotate(180deg);
+}

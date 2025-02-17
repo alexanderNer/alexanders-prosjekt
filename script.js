@@ -15,7 +15,7 @@ let fuglBunn = 0;
 let fuglVenstre = 0;
 let startId = null;
 let yFart = 0
-
+let gap = 400
 
 document.addEventListener("keydown", (e) => {
     if (e.code == "Space") {
@@ -37,6 +37,7 @@ function startGame() {
     fuglBunn = 300
     fuglVenstre = 20
     startId = setInterval(fuglFall, 20)
+    generatePipes()
 }
 
 
@@ -63,10 +64,51 @@ function fuglFall() {
 
     if (fuglBunn < 0 || fuglBunn > 600) {
         gameOver()
+        console.log("GAME OVER")
     }
 }
 
 function fuglOpp() {
     fuglBunn += 5
     yFart = 10
+}
+
+let generatePipes =() =>{
+    let bottomPipeImg = document.createElement("img")
+    let topPipeImg = document.createElement("img")
+    bottomPipeImg.src = "bilder/Pipe.jpg"
+    topPipeImg.src = "bilder/Pipe.jpg"
+
+    let pipeLeft = 290
+    let bottomPipe = document.createElement("div")
+    let randomHeigth = Math.floor(Math.random() * 65)
+    let pipeBottom = randomHeigth
+
+    bottomPipe.style.bottom = pipeBottom + "px"
+    bottomPipe.style.left = pipeLeft + "px"
+    bottomPipe.classList.add("bottomPipe")
+    bottomPipe.appendChild(bottomPipeImg)
+    container.appendChild(bottomPipe)
+
+    let topPipe = document.createElement("div")
+    topPipe.style.bottom = pipeBottom + gap + "px"
+    topPipe.style.left = pipeLeft + "px"
+    topPipe.classList.add("topPipe")
+    topPipe.appendChild(topPipeImg)
+    container.appendChild(topPipe)
+
+    let movePipe = () => {
+        pipeLeft -= 2
+        bottomPipe.style.left = pipeLeft + "px"
+        topPipe.style.left = pipeLeft + "px"
+    }
+    let timeId = setInterval(movePipe, 20)
+
+    setTimeout(generatePipes, 1800)
+
+    if(pipeLeft === -20){
+        clearInterval(timeId)
+        container.removeChild(bottomPipe)
+        container.removeChild(topPipe)
+    }
 }
