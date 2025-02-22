@@ -73,7 +73,7 @@ function fuglOpp() {
     yFart = 10
 }
 
-let generatePipes =() =>{
+ let generatePipes =() =>{
     let bottomPipeImg = document.createElement("img")
     let topPipeImg = document.createElement("img")
     bottomPipeImg.src = "bilder/Pipe.jpg"
@@ -111,4 +111,6 @@ let generatePipes =() =>{
         container.removeChild(bottomPipe)
         container.removeChild(topPipe)
     }
-}
+} 
+
+  
